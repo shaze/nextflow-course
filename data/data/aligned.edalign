@@ -1,0 +1,165 @@
+ 
+                           DIALIGN 2.2.1 
+                           *************
+ 
+          Program code written by Burkhard Morgenstern and Said Abdeddaim 
+             e-mail contact: dialign (at) gobics (dot) de 
+ 
+          Published research assisted by DIALIGN 2 should cite:  
+ 
+             Burkhard Morgenstern (1999).
+             DIALIGN 2: improvement of the segment-to-segment
+             approach to multiple sequence alignment.
+             Bioinformatics 15, 211 - 218. 
+
+          For more information, please visit the DIALIGN home page at 
+
+             http://bibiserv.techfak.uni-bielefeld.de/dialign/ 
+ 
+         ************************************************************
+ 
+
+
+   program call:  edialign -auto -sequences do.fasta -outfile aligned.edalign -outseq aligned.fasta  
+
+ 
+   Aligned sequences:          length:
+   ==================          =======
+ 
+   1) W27878                     562
+   2) W27879                     560
+   3) W27880                     563
+   4) W27881                     501
+
+   Average seq. length:          546.5 
+
+
+   Please note that only upper-case letters are considered to be aligned. 
+
+
+   Alignment (DIALIGN format):
+   ===========================
+ 
+W27878             1   ---------- ---------- ---------- ---------- ---------- 
+W27879             1   cggag----G AAAGATGGCG GC----TACC TTACTAGCTG CTCGGGGAGC 
+W27880             1   aCCGGAGGAG AAAGATGGCG GCctctTACC TTACTAGCTG CTCGGGGAGC 
+W27881             1   -CCGGAGGAG AAAGATGGCG GC----TACC TTACTAGCTG CTCGGGGAGC 
+                                                                 
+                       0000000002 2222222222 2200004444 4444444444 4444444444 
+ 
+W27878             1   ---------- ---------- ---------- ---------- ---------- 
+W27879            43   CGGGCCAGCA CCGGCTTGGG GGCCGGAGNA TNTCACTCCA GACTGGGAAA 
+W27880            51   CGGGCCAGCA CCGGCTTGGG GGCCGGAGNA TNTCACTCCA GACTGGGAAA 
+W27881            46   CGGGCCAGCA CCGGCT---- ---------- ---------- ---------- 
+                                                                 
+                       4443333333 3333330000 0000000000 0000001111 1111111111 
+ 
+W27878             1   ---------- ---------- ---------- ---------- ---------- 
+W27879            93   GCCGAGAAGT TTCCACTGGG ACCACTATCA TGGCCGTGCA G--------- 
+W27880           101   GCCGAGAAGT TTCCACTGGG ACCACTtttg tttttttttt tatttttttt 
+W27881            62   ---------- ---------- ------ATCA TGGCCGTGCA G--------- 
+                                                                 
+                       1111111111 1111111111 1111110000 0000000000 0000000000 
+ 
+W27878             1   ---------- ---------- ---------- ---------- -------GGG 
+W27879           134   ---TTTGCGG GGGCGTGGTT CTGGGGGCGG ACTCCAGAAC AACCACTGGG 
+W27880           151   ttTTTGGGGG GGGGGGGGTT TTtttttttt taaat----- ------TGGG 
+W27881            77   --TTTGACGG GGGCGTGGTT CTGGGGGCGG ACTCCAGAAC AACCACTGCG 
+                                                                 
+                       0000000111 1111111111 1111111111 1111111111 1111114557 
+ 
+W27878             4   TCCTACATCG CCAATCGAGT NACTGACAAG CTGACACCTA TTCACGACCG 
+W27879           181   TCCTACATCG CCAATCGAGT NACTGACAAG CTGACACCTA TTCACGACCG 
+W27880           190   TCCTACATCG CCAATCGAGT NACTGACAAG CTGACACCTA TTCACGACCT 
+W27881           125   TCCTACATCG CCAATCGAGT NACTGACAAG CTGACAaCTA TTCACGACCG 
+                                                                 
+                       7777777777 7777777777 7777777777 7777774888 8888888888 
+ 
+W27878            54   CATTTTCTGC TGTCGCTCAG GCTCAGCTGC TGATACCCAG GCAGTAGCTG 
+W27879           231   CATTTTCTGC TGTCGCTCAG GCTCAGCTGC TGATATTCAG GCAGTAGCTG 
+W27880           240   CATTTTCTGC TGTCGCTCAG GCTCAGCTGC TGATACCCAG GCAGTAGCTG 
+W27881           175   CATTTTCTGC TGTCGCTCAG GCTCAGCTGC TGATACCCAG GCAGTAGCTG 
+                                                                 
+                       8888888888 8888888888 8889998777 7777777777 7777777777 
+ 
+W27878           104   ATGCTGTCAC CTA-CCAGCT CGGTTTCCAC AGCATTGAAC TGAATGA-GC 
+W27879           281   ATGCTGTCAC CTA-CCAGCT CGGTTTCCAC AGCATTGAAC TGAATGAGGC 
+W27880           290   ATGCTGTCAC CTA-CCAGCT CGGTTTCCAC AGCATTGAAC TGAATGAG-C 
+W27881           225   ATGCTGTCAC CTAcCCAGCT CGGTTTCCAC AGCATTGAAC TGAATGAG-C 
+                                                                 
+                       7777777888 8880888888 8888888888 8888888888 8888888415 
+ 
+W27878           152   CTCCACTGGT CCACACAGCA GCCAGCCTCT TTNAAGGAGA TGTGTTACCG 
+W27879           330   CTCCACTGGT CCACACAGCA GCCAGCCTCT TTNAAGGAGA TGTGTTACCG 
+W27880           338   CTCCACTGGT CCACACAGCA GCCAGCCTCT TTNAAGGAGA TGTGT----- 
+W27881           274   CTCCACTGGT CCACACAGCA GCCAGCCTCT TTNAAGGAGA TGTGTTACCG 
+                                                                 
+                       5555555667 7777777777 7777777777 7757777775 5555533344 
+ 
+W27878           202   ATAACCGGGA AGACCTGATG GCGGGAATCA TCATCGCAGc ggaggagaaa 
+W27879           380   ATAACCGGGA AGACCTGATG GCGGGAATCA TCATCGCAG- ---------- 
+W27880           383   -----CGGGA AGACCTGATG GCGGGAATCA TCATCGCAG- ---------- 
+W27881           324   ATAACCGGGA AGACCTGATG GCGGGAATCA TCATCGttag aaaaaaaaaa 
+                                                                 
+                       4444488888 8888888888 8887777777 7777772220 0000000000 
+ 
+W27878           252   gatggcggct accttactag ctgctcgggg agccgggcca gcaccggctt 
+W27879           419   ---------- ---------- ---------- ---------- ---------- 
+W27880           417   ---------- ---------- ---------- ---------- ---------- 
+W27881           374   aaaaaaaaat tttttt---- ---------- ---------- ---------- 
+                                                                 
+                       0000000000 0000000000 0000000000 0000000000 0000000000 
+ 
+W27878           302   gggggccgga gnatntcact ccagactggg aaagccgaga agtttccact 
+W27879           419   ---------- ---------- ---------- ---------- ---------- 
+W27880           417   ---------- ---------- ---------- ---------- ---------- 
+W27881           390   ---------- ---------- ---------- ---------- ---------- 
+                                                                 
+                       0000000000 0000000000 0000000000 0000000000 0000000000 
+ 
+W27878           352   gggaccacta tcatggccgt gcagTTTGAC GGGGGCGTGG TTCTgggggc 
+W27879           419   ---------- ---------- ---------- ---------- ---------- 
+W27880           417   ---------- ---------- ---------- ---------- ---------- 
+W27881           390   ---------- ---------- ----TTTGGG GGGGGGGGGG TTTTtttttt 
+                                                                 
+                       0000000000 0000000000 0000000000 0000000000 0000000000 
+ 
+W27878           402   ggactccaga acaaccactG -----CTGGG ACCCTCAAGA AGGAGGGCAG 
+W27879           419   ---------- ---------G -----CTGGG ACCCTCAAGA AGGAGGGCAG 
+W27880           417   ---------- ---------G gggggCTGGG ACCCTCAAGA AGGAGGGCAG 
+W27881           416   tttaaatt-- ---------- ---------- ---------- ---------- 
+                                                                 
+                       0000000000 0000000002 0000033333 3333333333 3333333333 
+ 
+W27878           447   GTGTA-CTCA GTGNCTATGG GGGGTATGAT GGTAAGGCAG TNCTTTGCCA 
+W27879           445   GTGTAaCTCA GTGNCTATGG GGGGTATGAT GGTAAGGCAG TNCTTTGCCA 
+W27880           448   GTGTA-CTCA GTGNCTATGG GGGGTATGAT GGTAAGGCAG TNCTTTGCCA 
+W27881           424   ---------- ---------- ---------- -------CAG TNCTTTGCCA 
+                                                                 
+                       3333303333 3332333333 3333333333 3333333666 6366666666 
+ 
+W27878           496   TTGGAGGTTC GGGAGGTTCT ACATCTATTG GCTATTGTTG ATGTAACTAC 
+W27879           495   TTGGAGGTTC GGGAc-TTCT ACATCTATTG GCTATTGTTG CTGTAACTAC 
+W27880           497   TTGGAGGTTC GGGAGGTTCT ACATCTATTG GCTATTGTTG ATGTATCTAC 
+W27881           437   TTGGAGGTTC GGGAGGTTCT ACATCTA--G GCTATTGTTG ATGTAACTAC 
+                                                                 
+                       6666666666 6666445555 5555555336 6666666666 4666666666 
+ 
+W27878           546   CGGGAAGGAT GACCAAG 
+W27879           544   CGGGAAGGAT GACCAAG 
+W27880           547   CGGGAAGGAT GACCAAG 
+W27881           485   CAGGAAGGAT GACCAAG 
+                             
+                       6666666666 6666666 
+ 
+
+ 
+ 
+   Sequence tree:
+   ==============
+
+Tree constructed using UPGMA based on DIALIGN fragment weight scores
+ 
+(W27878      :0.002963((W27879      :0.002312W27880      :0.002312):0.000432W27881      :0.002743):0.000219);
+ 
+ 
