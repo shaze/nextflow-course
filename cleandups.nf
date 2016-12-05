@@ -1,4 +1,4 @@
-
+#!/usr/bin/env nextflow
 
 
 input_ch = Channel.fromPath("data/11.bim")
