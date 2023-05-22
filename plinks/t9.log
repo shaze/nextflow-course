@@ -1,0 +1,26 @@
+PLINK v1.90b6.21 64-bit (19 Oct 2020)
+Options in effect:
+  --bfile thin
+  --extract 9.snps
+  --make-bed
+  --out t9
+
+Hostname: n02
+Working directory: /dataF/synthetic/raw/batch1
+Start time: Mon May 22 11:47:09 2023
+
+Random number seed: 1684748829
+128315 MB RAM detected; reserving 64157 MB for main workspace.
+4620 variants loaded from .bim file.
+504 people (164 males, 339 females, 1 ambiguous) loaded from .fam.
+Ambiguous sex ID written to t9.nosex .
+--extract: 191 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 504 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.982828.
+191 variants and 504 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to t9.bed + t9.bim + t9.fam ... done.
+
+End time: Mon May 22 11:47:09 2023
