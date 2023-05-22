@@ -44,6 +44,20 @@ Checkout the `phase` branch
 In this exercise we fix the semantic problem from Exercise 0 to show that even if we have multiple input
 files we get the corrrect result
 
+- First, look at, understand phase.nf which shows a simple example of how `join` works. By default,
+  it takes two channels of tuples and _phases_ them using the first element of each tuple as a common key
+- Note also
+   -- we can construct output names dynamically using input values
+   -- the use of the directive `publishDir` to direct output. In this case, the output directory is fixed, but
+      we could also construct it dynamically
+
+Now look at `cleandups.nf`. This takes our previous example and fixes the semantic problems
+
+-- Run the code
+
+
+
+##  Exercise 2
 
 
 
