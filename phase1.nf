@@ -1,39 +1,29 @@
 #!/usr/bin/env nextflow
 
-Channel.fromPath("data/*.dat").set { data }
+Channel.from([1,"apple"],[2,"banana"],[3,"cherry"],[4,"date"]).set { fruits }
+Channel.from([4,"pie"],[5,"sundae"],[2,"split"],[1,"tart"],[3,"ice cream"]). set { modes }
 
 
-process P1 {
-   input:
-      file(data)
-   output:
-      file  "${fbase}.pre" into channelA
-      file  data           into channelB
-   script:
-      fbase=data.baseName
-      "echo dummy > ${fbase}.pre"
+fruits.join(modes).view()
+
+
+
+
+process silly {
+    input:
+      tuple val(name), val(serving)
+    output:
+      path(out_fname)
+    publishDir "servings"
+    script:
+      out_fname = "${name}.dat"
+      """
+        echo $serving > ${out_fname}
+      """
 }
 
-process P2 {
-   input:
-     file pre from channelA
-   output:
-     file pre into channelC
-   script:
-      if (pre.baseName == "a")
-      "sleep 4"
-      else
-      "sleep 1"
-
-}
-
-process P3 {
-   input:
-      set file(pre), file(data) from \
-         channelB.phase(channelC) { fn -> fn.baseName }
-   echo true
-   script:
-    """
-     echo "${data} - $pre"
-    """
+workflow  {
+    main:
+      fruits.join(modes).map{ num, fruit, mode -> [fruit, "I like $fruit $mode priority $num"] }.set { servings }
+      silly(servings)
 }
