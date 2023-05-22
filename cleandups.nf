@@ -5,19 +5,19 @@
 
 process getIDs {
     input:
-       file input
+       path(input)
     output:
-       file "ids" 
-       file "11.bim"  // obviously not best way to do things
+       path("ids") 
+       path("11.bim")  // obviously not best way to do things
     script:
        " cut -f 2 $input | sort > ids "
 }
 
 process getDups {
     input:
-       file input
+       path(input)
     output:
-       file "dups" 
+       path("dups")
     script:
        """
        uniq -d $input > dups 
@@ -28,10 +28,10 @@ process getDups {
 
 process removeDups {
     input:
-       file badids 
-       file orig   
+       path badids 
+       path orig   
     output:
-       file "clean.bim" 
+       path "clean.bim" 
     script:
        "grep -v -f $badids $orig > clean.bim "
 }
