@@ -39,7 +39,7 @@ Otherwise or then move to Exercise 2
 
 Checkout the `phase` branch
 
-- `git checkout phase`
+- `git checkout phasing`
 
 In this exercise we fix the semantic problem from Exercise 0 to show that even if we have multiple input
 files we get the corrrect result
