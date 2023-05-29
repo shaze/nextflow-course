@@ -153,5 +153,23 @@ Checkout the _config_ branch: `git checkout config`  (again, if you have amended
 
 Now check out the _docker_ branch:  `git checkout docker`
 
+## Exercise 5: Using containers
+
+We will use singularity rather than docker.
+
+First, do this to see what version of git is native on the computer: `git --version`
+
+Now read both the _nextflow.config_ and the _git.nf_ file.
+
+Run _git.nf_:  `nextflow run git.nf`
+
+Look at the output of the file to see what version of git runs. Explain what happens.
+
+## Exercise 5: Running on SLURM
+
+Checkout _slurm_: `git checkout slurm`
+
+
+
 
 
