@@ -9,12 +9,12 @@ Sydney Brenner Institute for Molecular Bioscience
 
 University of the Witwatersrand
 
-##Set up
+## Set up
 
 Clone the repo
 - `git clone shaze/nextflow-course`
 
-##Exercise 0
+## Exercise 0
 
 Read and run the `show.nf` script
 - `nextflow run show.nf`
@@ -115,7 +115,7 @@ There are several ways in which _params_ can be set. This causes occasional conf
 There are other rules and you can also have different config files -- look at the documentation for detail.
 
 
-### Grouping input files
+### Grouping input files
 
 
 Have a look at `group.nf`. First, note how we create channels using different methods. The factory method _fromFilePairs_ allows us to create a channel of file tuples that are grouped according to some rule. In our case, we do several  things
