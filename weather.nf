@@ -6,9 +6,9 @@ inp_channel = Channel.fromFilePairs("data/*dat", size: -1) \
 
 process pasteData {
    input:
-      set val(key), file(data) from inp_channel
+      set val(key), file(data) 
    output:
-      file "${key}.res" into concat_ch 
+      file "${key}.res" 
    publishDir ....
    script:
       " ... "
@@ -19,7 +19,7 @@ process pasteData {
 
 process concatData {
    input:
-      file("*") from concat_ch.toList()
+      file("*") 
    output:
       ....
    publishDir "output", overwrite:true, mode:'move'
@@ -28,6 +28,10 @@ process concatData {
 }
 
 
-output_ch.subscribe { print "$it\n" }
+workflow  {
+
+
+
+}
 
 
