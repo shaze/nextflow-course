@@ -89,7 +89,7 @@ Run the code
 We now move the next exercise.
 
 
-## Exercise 2
+##  Exercise 3
 
 To move to this exercise say `git checkout grouping` (If you've changed any of my files in the current exercise, git may complain and you will have to say `git commit -a -m "MovingOn!!!"`)
 
@@ -114,7 +114,9 @@ There are several ways in which _params_ can be set. This causes occasional conf
 
 There are other rules and you can also have different config files -- look at the documentation for detail.
 
+
 ### Grouping input files
+
 
 Have a look at `group.nf`. First, note how we create channels using different methods. The factory method _fromFilePairs_ allows us to create a channel of file tuples that are grouped according to some rule. In our case, we do several  things
 -- we use our _params_ to select which directory and file sets will be used
@@ -129,8 +131,45 @@ There's another example you can uncomment out. One slightly confusing thing in r
 
 ### PLINK example
 
-In this example, e are going to take a number of different PLINK file sets, compute the frequencies, and then merge the results. When `plink` is run it needs three input files a _bed_, _bim_ and _fam_ file. If we are running multiple file sets through `plink` we have to make sure that we are consistent -- we can't use the _bed_ file from one data set, the _bim_ from another and the _fam_ from yet another. Even if by some miracle the sizes of the files somehow allow this to work we are going to get nonsense as a result.
+In this example, we are going to take a number of different PLINK file sets, compute the frequencies, and then merge the results. When `plink` is run it needs three input files a _bed_, _bim_ and _fam_ file. If we are running multiple file sets through `plink` we have to make sure that we are consistent -- we can't use the _bed_ file from one data set, the _bim_ from another and the _fam_ from yet another. Even if by some miracle the sizes of the files somehow allow this to work we are going to get nonsense as a result.
 
 Thus we use _fromFilePairs_ to do the grouping. Look at `freq.nf`
 
-*Exercise: * The problem with this solution is that the output file is not in the right order -- how can it be fixed?
+*Exercise*: The problem with this solution is that the output file is not in the right order -- how can it be fixed?
+
+
+*Exercise*: Checkout _pairs_ for a simple exercise. Here we have different data for differents months of different years. Combine the monthly data by doing a _paste_ and then combined the monthly data to get yearly data.
+
+
+## Exercise 4: Using the config file.
+
+Checkout the _config_ branch: `git checkout config`  (again, if you have amended any of my files you may have to commit the change.
+
+* Have a look at the _nextflow.config_ file
+* Run the program _show_param.nf_: `nextflow run show_param.nf`
+* Can you understand the output?
+* Try different toptions like `nextflow run show_param.nf --other 7 --cut-off 15`
+* modify the _nextflow.config_ file and see how it works
+
+Now check out the _docker_ branch:  `git checkout docker`
+
+## Exercise 5: Using containers
+
+We will use singularity rather than docker.
+
+First, do this to see what version of git is native on the computer: `git --version`
+
+Now read both the _nextflow.config_ and the _git.nf_ file.
+
+Run _git.nf_:  `nextflow run git.nf`
+
+Look at the output of the file to see what version of git runs. Explain what happens.
+
+## Exercise 5: Running on SLURM
+
+Checkout _slurm_: `git checkout slurm`
+
+
+
+
+
