@@ -131,8 +131,10 @@ There's another example you can uncomment out. One slightly confusing thing in r
 
 ### PLINK example
 
-In this example, e are going to take a number of different PLINK file sets, compute the frequencies, and then merge the results. When `plink` is run it needs three input files a _bed_, _bim_ and _fam_ file. If we are running multiple file sets through `plink` we have to make sure that we are consistent -- we can't use the _bed_ file from one data set, the _bim_ from another and the _fam_ from yet another. Even if by some miracle the sizes of the files somehow allow this to work we are going to get nonsense as a result.
+In this example, we are going to take a number of different PLINK file sets, compute the frequencies, and then merge the results. When `plink` is run it needs three input files a _bed_, _bim_ and _fam_ file. If we are running multiple file sets through `plink` we have to make sure that we are consistent -- we can't use the _bed_ file from one data set, the _bim_ from another and the _fam_ from yet another. Even if by some miracle the sizes of the files somehow allow this to work we are going to get nonsense as a result.
 
 Thus we use _fromFilePairs_ to do the grouping. Look at `freq.nf`
 
-*Exercise: * The problem with this solution is that the output file is not in the right order -- how can it be fixed?
+*Exercise*: The problem with this solution is that the output file is not in the right order -- how can it be fixed?
+
+
