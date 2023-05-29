@@ -145,5 +145,13 @@ Thus we use _fromFilePairs_ to do the grouping. Look at `freq.nf`
 
 Checkout the _config_ branch: `git checkout config`  (again, if you have amended any of my files you may have to commit the change.
 
+* Have a look at the _nextflow.config_ file
+* Run the program _show_param.nf_: `nextflow run show_param.nf`
+* Can you understand the output?
+* Try different toptions like `nextflow run show_param.nf --other 7 --cut-off 15`
+* modify the _nextflow.config_ file and see how it works
+
+Now check out the _docker_ branch:  `git checkout docker`
+
 
 
