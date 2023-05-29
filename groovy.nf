@@ -1,4 +1,4 @@
-x#!/usr/bin/nextflow
+#!/usr/bin/nextflow
 
 // This is pure Groovy code -- but we can put it in our Nextflow program
 // Read through and make sure you understand what it does
