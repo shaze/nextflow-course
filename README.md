@@ -89,7 +89,7 @@ Run the code
 We now move the next exercise.
 
 
-##  Exercise 2
+##  Exercise 3
 
 To move to this exercise say `git checkout grouping` (If you've changed any of my files in the current exercise, git may complain and you will have to say `git commit -a -m "MovingOn!!!"`)
 
@@ -136,5 +136,14 @@ In this example, we are going to take a number of different PLINK file sets, com
 Thus we use _fromFilePairs_ to do the grouping. Look at `freq.nf`
 
 *Exercise*: The problem with this solution is that the output file is not in the right order -- how can it be fixed?
+
+
+*Exercise*: Checkout _pairs_ for a simple exercise. Here we have different data for differents months of different years. Combine the monthly data by doing a _paste_ and then combined the monthly data to get yearly data.
+
+
+## Exercise 4: Using the config file.
+
+Checkout the _config_ branch: `git checkout config`  (again, if you have amended any of my files you may have to commit the change.
+
 
 
